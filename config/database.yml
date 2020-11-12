@@ -50,5 +50,6 @@ test:
 production:
   <<: *default
   database: Community_production
-  username: Community
-  password: <%= ENV['COMMUNITY_DATABASE_PASSWORD'] %>
+  username: root
+  password: <%= ENV['DATABASE_PASSWORD'] %>
+  socket: /var/lib/mysql/mysql.sock
