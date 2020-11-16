@@ -3,6 +3,7 @@
     <div class='account-page__inner--left account-page__header'>
       <h2>Create Account</h2>
       <h5>新規アカウントの作成</h5>
+      <%= link_to "ログイン", new_session_path(resource_name)%>
       <%= link_to 'Googleで登録', user_google_oauth2_omniauth_authorize_path, method: :post%>
     </div>
     <div class='account-page__inner--right user-form'>

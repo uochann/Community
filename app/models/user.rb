@@ -16,7 +16,7 @@ class User < ApplicationRecord
        # sns認証したことがあればアソシエーションで取得
    # 無ければemailでユーザー検索して取得orビルド(保存はしない)
     user = User.where(email: auth.info.email).first_or_initialize(
-      nickname: auth.info.name,
+        name: auth.info.name,
         email: auth.info.email
     )
     # userが登録済みであるか判断
