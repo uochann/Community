@@ -12,7 +12,7 @@
 ##### Ruby on Rails, JavaScript,
 
 ### DB
-##### Mysql, ClearDB
+##### Mysql, 
 
 ## URL
 ##### <https://original-app-30549.herokuapp.com/>
