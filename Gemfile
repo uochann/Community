@@ -73,3 +73,7 @@ gem 'image_processing', '~> 1.2'
 
 gem 'omniauth-google-oauth2'
 gem "omniauth-rails_csrf_protection"
+
+gem 'jquery-rails', '4.3.3'
+gem 'fullcalendar-rails'
+gem 'momentjs-rails'
