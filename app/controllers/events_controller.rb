@@ -5,6 +5,7 @@ class EventsController < ApplicationController
   # GET /events.json
   def index
     @events = Event.all
+    @room = Room.find(params[:room_id])
   end
 
   # GET /events/1
