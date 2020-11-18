@@ -3,6 +3,10 @@
 // a relevant structure within app/javascript and only use these pack files to reference
 // that code so it'll be compiled.
 
+//= require jquery
+//= require moment
+//= require fullcalendar
+
 require("@rails/ujs").start()
 require("turbolinks").start()
 require("@rails/activestorage").start()
@@ -15,3 +19,20 @@ require("channels")
 //
 // const images = require.context('../images', true)
 // const imagePath = (name) => images(name, true)
+
+$(function () {
+  function eventCalendar() {
+      return $('#calendar').fullCalendar({});
+  };
+  function clearCalendar() {
+      $('#calendar').html('');
+  };
+  $(document).on('turbolinks:load', function () {
+  eventCalendar();
+  });
+  $(document).on('turbolinks:before-cache', clearCalendar);
+
+  $('#calendar').fullCalendar({
+  events: '/events.json'
+  });
+});
