@@ -2,7 +2,6 @@ class EventsController < ApplicationController
 
   def index
     @events = Event.all
-    @room = Room.find(params[:room_id])
   end
 
   def new
@@ -14,12 +13,8 @@ class EventsController < ApplicationController
   end
 
   def create
-    @event = Event.new(params[:id])
-    if @event.save(event_parameter)
-      redirect_to room_events_path(@room)
-    else
-      render :index
-    end
+    Event.create(event_params)
+    redirect_to events_path
   end
 
   def destroy
@@ -34,8 +29,8 @@ class EventsController < ApplicationController
 
   def update
     @event = Event.find(params[:id])
-    if @event.update(event_parameter)
-      redirect_to room_events_path, notice: "編集しました"
+    if @event.update(event_params)
+      redirect_to events_path, notice: "編集しました"
     else
       render 'edit'
     end
@@ -43,8 +38,8 @@ class EventsController < ApplicationController
 
   private
 
-  def event_parameter
-    params.permit(:title, :content, :start_time)
+  def event_params
+    params.require(:event).permit(:title, :content, :start_time)
   end
 
 end
