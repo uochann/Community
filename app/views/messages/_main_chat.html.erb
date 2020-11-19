@@ -6,7 +6,7 @@
   </div>
   <div class="right-header">
     <div class="header-button">
-      <%= link_to "カレンダー", room_events_path %>
+      <%= link_to "カレンダー", room_events_path(@room.id) %>
       <%= link_to "チャットを終了する", room_path(@room), method: :delete %>
     </div>
   </div>

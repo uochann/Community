@@ -26,12 +26,12 @@
 
 <br>
 
-<%= link_to '日記をかく', new_room_event_path %>
+<%= link_to '日記をかく', new_room_event_url(@room.id) %>
 
-<%= month_calendar events: @events do |date, events| %>
+<%= month_calendar events: @events do |date, event| %>
   <%= date.day %>
 
-  <% events.each do |event| %>
+  <% event.each do |event| %>
     <div>
       <%= link_to event.title, event %>
     </div>
