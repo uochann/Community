@@ -73,3 +73,5 @@ gem 'image_processing', '~> 1.2'
 
 gem 'omniauth-google-oauth2'
 gem "omniauth-rails_csrf_protection"
+
+gem 'simple_calendar', '~> 2.0'
