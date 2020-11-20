@@ -1,22 +1,8 @@
-<%= form_with(model: @event, local: true) do |form| %>
-  <div class="title">
-    <%= form.label :title %>
-    <%= form.text_field :title %>
+<div class="wrapper">
+  <div class="side-bar">
+    <%= render "messages/side_bar" %>
   </div>
-
-    <div class="time">
-    <%= form.label :start_time %>
-    <%= form.datetime_field :start_time %>
+  <div class="chat">
+    <%= render "form.event" %>
   </div>
-
-  <div class="content">
-    <%= form.label :content %>
-    <%= form.text_field :content %>
-  </div>
-
-
-  <div class="submit">
-    <%= form.submit %>
-  </div>
-
-<% end %>
+</div>
