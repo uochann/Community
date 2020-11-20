@@ -13,12 +13,8 @@ class EventsController < ApplicationController
   end
 
   def create
-    @event = Event.new(event_params)
-    if @event.save
-      redirect_to events_path, notice:"作成しました"
-    else
-      render :index
-    end
+    Event.create(event_params)
+    redirect_to events_path
   end
 
   def destroy
@@ -43,7 +39,7 @@ class EventsController < ApplicationController
   private
 
   def event_params
-    params.permit(:title, :content, :start_time)
+    params.require(:event).permit(:title, :start_time, :content)
   end
 
 end
