@@ -1,19 +1,8 @@
-<p id="notice"><%= notice %></p>
-
-<p>
-  <strong>タイトル</strong>
-  <%= @event.title %>
-</p>
-
-<p>
-  <strong>時間</strong>
-  <%= @event.start_time.strftime("%Y-%m-%d %H:%M") %>
-</p>
-
-<p>
-  <strong>内容</strong>
-  <%= @event.content %>
-</p>
-
-<%= link_to 'Edit', edit_room_event_path(@event) %> |
-<%= link_to 'Back', room_event_path %>
+<div class="wrapper">
+  <div class="side-bar">
+    <%= render "messages/side_bar" %>
+  </div>
+  <div class="chat">
+    <%= render "sub.event" %>
+  </div>
+</div>

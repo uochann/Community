@@ -14,7 +14,7 @@ class EventsController < ApplicationController
 
   def create
     Event.create(event_params)
-    redirect_to events_path
+    redirect_to events_path notice:"作成しました"
   end
 
   def destroy
