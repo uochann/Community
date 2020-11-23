@@ -1,5 +1,5 @@
 class EventsController < ApplicationController
-
+  before_action :set_event, only: [:edit, :show, :update, :destroy]
   def index
     @events = Event.all
   end
@@ -9,7 +9,6 @@ class EventsController < ApplicationController
   end
 
   def show
-    @event = Event.find(params[:id])
   end
 
   def create
@@ -18,17 +17,14 @@ class EventsController < ApplicationController
   end
 
   def destroy
-    @event = Event.find(params[:id])
     @event.destroy
     redirect_to events_path, notice:"削除しました"
   end
 
   def edit
-    @event = Event.find(params[:id])
   end
 
   def update
-    @event = Event.find(params[:id])
     if @event.update(event_params)
       redirect_to events_path, notice: "編集しました"
     else
@@ -37,6 +33,10 @@ class EventsController < ApplicationController
   end
 
   private
+
+  def set_event
+    @event = Event.find(params[:id])
+  end
 
   def event_params
     params.require(:event).permit(:title, :start_time, :content)
