@@ -75,3 +75,5 @@ gem 'omniauth-google-oauth2'
 gem "omniauth-rails_csrf_protection"
 
 gem 'simple_calendar', '~> 2.0'
+
+gem "aws-sdk-s3", require: false
