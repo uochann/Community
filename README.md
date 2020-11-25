@@ -15,7 +15,11 @@
 ##### Mysql, 
 
 ## URL
-##### <https://original-app-30549.herokuapp.com/>
+##### <http://13.230.102.234/>
+
+## その他
+##### デプロイにEC2を使いunicornを導入しました。ストレージにはAWSのS3を導入しています。
+
 
 ## 利用方法
 ##### アカウント登録を行っていただき、ログインしたらトップページに遷移します。  その後、画面上部にある、ナビバーにルームを作成するボタンがあるので、クリックしていただき、ルーム名を作成できます。そしてルームに招待するユーザーを指定し、作成します。トップページには参加してるルームが表示され、いつでもトークルームに入ることができます。
@@ -107,3 +111,10 @@
 - belongs_to :room
 - belongs_to :user
 
+## events テーブル
+
+| Column     | Type       | Options       |
+| ---------- | ---------- | ------------- |
+| title      | string     | null: false,  |
+| content    | text       | null: false,  |
+| start_time | datetime   | null: false,  |
