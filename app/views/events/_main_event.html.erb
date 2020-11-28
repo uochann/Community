@@ -17,9 +17,9 @@
       <tr>
         <td><%= event.title %></td>
         <td><%= event.start_time.strftime("%Y-%m-%d %H:%M") %></td>
-        <td><%= link_to 'Show', event %></td>
-        <td><%= link_to 'Edit', edit_event_path(event.id), metthod: :get  %></td>
-        <td><%= link_to 'Destroy', event_path(event.id), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to '詳細', event %></td>
+        <td><%= link_to '編集', edit_event_path(event.id), metthod: :get  %></td>
+        <td><%= link_to '削除', event_path(event.id), method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
