@@ -12,6 +12,7 @@ class EventsController < ApplicationController
   end
 
   def create
+    @room = Room.find(params[:room_id])
     Event.create(event_params)
     redirect_to events_path notice:"作成しました"
   end
