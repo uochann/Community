@@ -5,8 +5,9 @@ Rails.application.routes.draw do
   }
   root to: "rooms#index"
   resources :users, only: [:edit, :update]
+  resources :events
   resources :rooms, only: [:new, :create, :destroy] do
     resources :messages, only: [:index, :create]
-    resources :events
   end
+  post 'events', to: 'events#create'
 end
