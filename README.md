@@ -21,10 +21,13 @@
 ##### Mysql, Mariadb
 
 ### インフラ
-##### AWS(EC2, S3), Docker,
+##### AWS(EC2, S3), Docker
+
+### ローカル環境
+##### Docker
 
 ### Webサーバ
-##### Nginx,
+##### Nginx
 
 ### ソース管理
 ##### Github
