@@ -16,7 +16,7 @@ default: &default
   username: root
   password:
   socket: /tmp/mysql.sock
-  host: db
+  host: community_db_1
   port: 4306
 
 development:
