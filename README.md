@@ -24,7 +24,7 @@
 ##### AWS(EC2, S3), Docker
 
 ### ローカル環境
-##### Docker
+##### docker-compose
 
 ### Webサーバ
 ##### Nginx
