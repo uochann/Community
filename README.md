@@ -133,8 +133,8 @@
 
 ## events テーブル
 
-| Column     | Type       | Options       |
-| ---------- | ---------- | ------------- |
-| title      | string     | null: false,  |
-| content    | text       | null: false,  |
-| start_time | datetime   | null: false,  |
+| Column     | Type       | Options      |
+| ---------- | ---------- | ------------ |
+| title      | string     | null: false  |
+| content    | text       | null: false  |
+| start_time | datetime   | null: false  |
