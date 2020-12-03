@@ -38,6 +38,8 @@ group :development, :test do
   gem 'capistrano3-unicorn'
   gem 'rubocop', require: false
   gem 'rspec-rails'
+  gem 'factory_bot_rails'
+  gem 'faker'
 end
 
 group :development do
