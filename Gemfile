@@ -37,6 +37,7 @@ group :development, :test do
   gem 'capistrano-rails'
   gem 'capistrano3-unicorn'
   gem 'rubocop', require: false
+  gem 'rspec-rails'
 end
 
 group :development do
