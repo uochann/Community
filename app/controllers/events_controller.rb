@@ -13,12 +13,12 @@ class EventsController < ApplicationController
 
   def create
     Event.create(event_params)
-    redirect_to events_path notice:"作成しました"
+    redirect_to events_path notice: '作成しました'
   end
 
   def destroy
     @event.destroy
-    redirect_to events_path, notice:"削除しました"
+    redirect_to events_path, notice: '削除しました'
   end
 
   def edit
@@ -26,7 +26,7 @@ class EventsController < ApplicationController
 
   def update
     if @event.update(event_params)
-      redirect_to events_path, notice: "編集しました"
+      redirect_to events_path, notice: '編集しました'
     else
       render 'edit'
     end
@@ -41,5 +41,4 @@ class EventsController < ApplicationController
   def event_params
     params.require(:event).permit(:title, :start_time, :content)
   end
-
 end
