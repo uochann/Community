@@ -5,7 +5,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable, :omniauthable, omniauth_providers: [:google_oauth2]
 
   validates :name,     presence: true
-  validates :password, presence: true,     format: { with: /\A[a-z0-9]+\z/i }
+  validates :password, presence: true, format: { with: /\A[a-z0-9]+\z/i }
 
   has_many :sns_credentials
   has_many :room_users
