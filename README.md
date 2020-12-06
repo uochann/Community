@@ -21,7 +21,10 @@
 ##### Mysql, Mariadb
 
 ### インフラ
-##### AWS(EC2, S3), Docker
+##### AWS(EC2, S3)
+
+### ミドルウェア
+##### Docker
 
 ### ローカル環境
 ##### docker-compose
