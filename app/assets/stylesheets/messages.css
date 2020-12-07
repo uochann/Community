@@ -10,6 +10,7 @@
 .side-bar-header {
   height: 90px;
   padding: 0 20px;
+  border-radius: 8px;
   background-color: #253141;
   display: flex;
   justify-content: space-between;
