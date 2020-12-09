@@ -5,13 +5,14 @@
   background-color: #253141;
   width: 300px;
   height: 100vh;
+  border-radius: 8px;
 }
 
 .side-bar-header {
   height: 90px;
   padding: 0 20px;
   border-radius: 8px;
-  background-color: #253141;
+  background-color: pink;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -19,7 +20,7 @@
 
 .header-name a{
   font-size: 16px;
-  color: #FAFAFA;
+  color: deepskyblue;
   text-decoration: none;
 }
 
@@ -32,6 +33,7 @@
   padding: 14px;
   color: deepskyblue;
   text-decoration: none;
+  border-radius: 8px;
 }
 
 .rooms {
