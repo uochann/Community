@@ -4,11 +4,16 @@ class RoomsController < ApplicationController
   end
 
   def new
+    @room = Room.new
   end
 
   def create
-    Room.create(room_params)
-    redirect_to root_path notice: '作成しました'
+    @room = Room.new(room_params)
+    if @room.save
+      redirect_to root_path
+    else
+      redirect_to new_room_path
+    end
   end
 
   def destroy
@@ -20,6 +25,6 @@ class RoomsController < ApplicationController
   private
 
   def room_params
-    params.require(:room).permit(:name, user_ids:[])
+    params.require(:room).permit(:name, { :user_ids=> [] })
   end
 end
