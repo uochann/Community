@@ -7,7 +7,6 @@ class RoomsController < ApplicationController
   end
 
   def create
-    binding.pry
     @room = Room.new(room_params)
     if @room.save
       redirect_to root_path
@@ -25,6 +24,6 @@ class RoomsController < ApplicationController
   private
 
   def room_params
-    params.require(:room).permit(:content, user_ids: [])
+    params.require(:room).permit(:name, user_ids: [])
   end
 end
