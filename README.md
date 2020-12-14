@@ -50,11 +50,11 @@
 ## testアカウント
 
 ### ユーザー1
-##### email: tanaka@com
+##### email: tanaka@gmail.com
 ##### password: tanaka0
 
 ### ユーザー2
-##### email: satou@com
+##### email: satou@gmail.com
 ##### password: satou0
 
 
