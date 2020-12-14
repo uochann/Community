@@ -11,7 +11,7 @@ class RoomsController < ApplicationController
     if @room.save
       redirect_to root_path
     else
-      redirect_to new_room_path
+      render :new
     end
   end
 
@@ -24,6 +24,6 @@ class RoomsController < ApplicationController
   private
 
   def room_params
-    params.require(:room).permit(:name, { user_ids: [] })
+    params.require(:room).permit(:name, user_ids: [])
   end
 end
