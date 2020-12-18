@@ -24,7 +24,7 @@
 ##### AWS(EC2, S3)
 
 ### ミドルウェア
-##### Docker, circleci
+##### Docker, CircleCi
 
 ### ローカル環境
 ##### docker-compose
