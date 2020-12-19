@@ -84,3 +84,6 @@ gem 'simple_calendar', '~> 2.0'
 gem "aws-sdk-s3", require: false
 
 gem 'rails-i18n'
+
+gem 'devise-i18n'
+gem 'devise-i18n-views'
