@@ -4,9 +4,9 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable, :omniauthable, omniauth_providers: [:google_oauth2]
 
-  has_many :sns_credentials
   has_many :room_users
   has_many :rooms, through: :room_users
+  has_many :sns_credentials
   has_many :messages
 
   validates :name,     presence: true

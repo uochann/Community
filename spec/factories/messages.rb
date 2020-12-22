@@ -1,5 +1,5 @@
 FactoryBot.define do
-  factory :room do
+  factory :message do
     
   end
 end
