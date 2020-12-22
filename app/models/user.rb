@@ -4,10 +4,11 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable, :omniauthable, omniauth_providers: [:google_oauth2]
 
+  
   has_many :room_users
   has_many :rooms, through: :room_users
-  has_many :sns_credentials
   has_many :messages
+  has_many :sns_credentials
 
   validates :name,     presence: true
   validates :password, presence: true, format: { with: /\A[a-z0-9]+\z/i }
