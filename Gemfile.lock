@@ -62,7 +62,7 @@ GEM
       sshkit (>= 1.6.1, != 1.7.0)
     ast (2.4.1)
     aws-eventstream (1.1.0)
-    aws-partitions (1.412.0)
+    aws-partitions (1.413.0)
     aws-sdk-core (3.110.0)
       aws-eventstream (~> 1, >= 1.0.2)
       aws-partitions (~> 1, >= 1.239.0)
@@ -131,7 +131,7 @@ GEM
       railties (>= 5.0.0)
     faker (2.15.1)
       i18n (>= 1.6, < 2)
-    faraday (1.1.0)
+    faraday (1.2.0)
       multipart-post (>= 1.2, < 3)
       ruby2_keywords
     ffi (1.14.2)
