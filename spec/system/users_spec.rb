@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe "ユーザーログイン機能", type: :system do
+RSpec.describe 'ユーザーログイン機能', type: :system do
   it 'ログインしていない場合、サインインページに移動する' do
     # トップページに遷移する
     visit root_path
@@ -14,7 +14,7 @@ RSpec.describe "ユーザーログイン機能", type: :system do
     @user = FactoryBot.create(:user)
 
     # サインインページへ移動する
-    visit  new_user_session_path
+    visit new_user_session_path
 
     # ログインしていない場合、サインインページに遷移していることを確認する
     expect(current_path).to eq new_user_session_path
@@ -24,7 +24,7 @@ RSpec.describe "ユーザーログイン機能", type: :system do
     fill_in 'user_password', with: @user.password
 
     # ログインボタンをクリックする
-    click_on("Log in")
+    click_on('Log in')
 
     # トップページに遷移していることを確認する
     expect(current_path).to eq root_path
@@ -41,11 +41,11 @@ RSpec.describe "ユーザーログイン機能", type: :system do
     expect(current_path).to eq new_user_session_path
 
     # 誤ったユーザー情報を入力する
-    fill_in 'user_email', with: "test"
-    fill_in 'user_password', with: "test"
+    fill_in 'user_email', with: 'test'
+    fill_in 'user_password', with: 'test'
 
     # ログインボタンをクリックする
-    click_on("Log in")
+    click_on('Log in')
 
     # サインインページに戻ってきていることを確認する
     expect(current_path).to eq new_user_session_path
