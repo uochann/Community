@@ -44,14 +44,14 @@ jobs:
            bundle exec rake db:schema:load
 
     # run tests!
-      - run:
-          name: RSpec の並列実行
-          command: |
-            bundle exec rspec --profile 10 \
-                              --format RspecJunitFormatter \
-                              --out test_results/rspec.xml \
-                              --format progress \
-                              $(circleci tests glob "spec/**/*_spec.rb" | circleci tests split --split-by=timings)
+    - run:
+        name: RSpec の並列実行
+        command: |
+          bundle exec rspec --profile 10 \
+                            --format RspecJunitFormatter \
+                            --out test_results/rspec.xml \
+                            --format progress \
+                            $(circleci tests glob "spec/**/*_spec.rb" | circleci tests split --split-by=timings)
 
     # collect reports
     - store_test_results:
