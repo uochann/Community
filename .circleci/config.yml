@@ -43,11 +43,6 @@ jobs:
            bundle exec rake db:create
            bundle exec rake db:schema:load
 
-    # 静的コード解析ツール
-    - run:
-        name: Rubocop
-        command: bundle exec rubocop -a
-
     # yarn install
     - run:
         name: yarn Install
