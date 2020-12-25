@@ -42,10 +42,7 @@ jobs:
         command: |
            bundle exec rake db:create
            bundle exec rake db:schema:load
-
-    - run:
-        name: yarn Install
-        command: yarn install
+           bundle exec bin/webpack
 
 
    - run: bundle exec bin/webpack
