@@ -8,8 +8,8 @@ class User < ApplicationRecord
   validates :password, presence: true, format: { with: /\A[a-z0-9]+\z/i }
 
   has_many :room_users
-  has_many :rooms, through: :room_users
-  has_many :messages
+  has_many :rooms, through: :room_users, dependent: :destroy
+  has_many :messages, dependent: :destroy
   has_many :sns_credentials
 
   def self.from_omniauth(auth)

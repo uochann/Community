@@ -10,11 +10,6 @@ RSpec.describe Message, type: :model do
       expect(@message).to be_valid
     end
 
-    it 'contentが空でも保存できること' do
-      @message.content = nil
-      expect(@message).to be_valid
-    end
-
     it 'imageが空でも保存できること' do
       @message.image = nil
       expect(@message).to be_valid
