@@ -46,7 +46,7 @@ jobs:
     # 静的コード解析ツール
     - run:
         name: Rubocop
-        command: bundle exec rubocop
+        command: bundle exec rubocop -a
 
     # yarn install
     - run:
