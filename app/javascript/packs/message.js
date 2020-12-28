@@ -18,7 +18,6 @@ $(document).on('turbolinks:load', function(){
                     ${img}
                   </p>
                 </div>`
-                
   return html;
   }
   $('#new_message').on('submit', function(e){
