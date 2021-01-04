@@ -2,21 +2,21 @@ $(document).on('turbolinks:load', function(){
   function buildHTML(message) {
     var content = message.content ? `${ message.content }` : "";
     var img = message.image ? `<img src= ${ message.image }>` : "";
-    var html = `<div class="message" data-id="${message.id}">
-                  <div class="message__detail">
-                    <p class="message__detail__current-user-name">
-                      ${message.user_name}
-                    </p>
-                    <p class="message__detail__date">
-                      ${message.date}
-                    </p>
-                  </div>
-                  <p class="message_body">
-                    <div>
-                    ${content}
+    var html = ` <div class="message">
+                  <div class="upper-message">
+                    <div class="message-user">
+                      ${message.user.name}
                     </div>
-                    ${img}
-                  </p>
+                    <div class="message-date">
+                      ${ message.created_at}
+                    </div>
+                  </div>
+                  <div class="lower-message">
+                    <div class="message-content">
+                      ${message.content}
+                    </div>
+                    <% image_tag ${message.image}.variant(resize: '500x500'), class: 'message-image' if message.image.attached? %>
+                  </div>
                 </div>`
   return html;
   }
