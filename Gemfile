@@ -87,3 +87,5 @@ gem 'rails-i18n'
 
 gem 'devise-i18n'
 gem 'devise-i18n-views'
+
+gem 'nokogiri', '~> 1.11.0.rc1'
