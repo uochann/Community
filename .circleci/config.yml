@@ -62,7 +62,7 @@ jobs:
                           --out /tmp/test-results/rspec.xml \
                           --format progress \
                           $TEST_FILES
-
+      #ssh接続
     - add_ssh_keys:
         fingerprints:
           - "MD5:20:0c:12:cd:e5:1d:c7:99:45:b8:b3:58:4e:e0:3f:27"
