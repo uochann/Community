@@ -67,6 +67,7 @@ jobs:
         fingerprints:
           - "d8:3f:c5:b2:c7:9d:a3:2c:b7:20:9d:99:f5:b4:ca:ad"
 
+      #デプロイ
     - deploy:
         name: Capistrano deploy
         command: |
