@@ -62,7 +62,15 @@ jobs:
                           --out /tmp/test-results/rspec.xml \
                           --format progress \
                           $TEST_FILES
-      #ssh接続
+
+    # collect reports
+    - store_test_results:
+        path: /tmp/test-results
+    - store_artifacts:
+        path: /tmp/test-results
+        destination: test-results
+
+          #ssh接続
     - add_ssh_keys:
         fingerprints:
           - "d8:3f:c5:b2:c7:9d:a3:2c:b7:20:9d:99:f5:b4:ca:ad"
@@ -75,10 +83,3 @@ jobs:
             exit 0
           fi
             bundle exec cap production deploy
-
-    # collect reports
-    - store_test_results:
-        path: /tmp/test-results
-    - store_artifacts:
-        path: /tmp/test-results
-        destination: test-results
