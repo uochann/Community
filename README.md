@@ -25,6 +25,7 @@
 
 ### ミドルウェア
 ##### Docker, CircleCi(自動テスト、自動デプロイ)
+###### CircleCiのビルドの結果をslackで通知するように設定いたしました。
 
 ### ローカル環境
 ##### docker-compose
