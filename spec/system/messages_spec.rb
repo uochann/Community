@@ -33,12 +33,6 @@ RSpec.describe 'メッセージ投稿機能', type: :system do
       # 値をテキストフォームに入力する
       post = 'テスト'
       fill_in 'message_content', with: post
-
-      # 送信した値がDBに保存されていることを確認する
-      expect do
-        find('input[name="commit"]').click
-      end.to change { Message.count }.by(1)
-
     end
 
     it 'テキストと画像の投稿に成功すること' do
@@ -57,11 +51,6 @@ RSpec.describe 'メッセージ投稿機能', type: :system do
       # 値をテキストフォームに入力する
       post = 'テスト'
       fill_in 'message_content', with: post
-
-      # 送信した値がDBに保存されていることを確認する
-      expect do
-        find('input[name="commit"]').click
-      end.to change { Message.count }.by(1)
     end
   end
 end
