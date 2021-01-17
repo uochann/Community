@@ -15,7 +15,6 @@ $(document).on('turbolinks:load', function(){
                     <div class="message-content">
                     ${content}
                     </div>
-                    ${img}
                   </p>
                 </div>`
   return html;
@@ -36,6 +35,7 @@ $(document).on('turbolinks:load', function(){
       var html = buildHTML(data);
       $('.messages').append(html);
       $('#message_content').val('');
+      scrollBottom();
     })
     .fail(function(data){
       alert('エラーが発生したためメッセージは送信できませんでした。');
@@ -45,3 +45,11 @@ $(document).on('turbolinks:load', function(){
     })
   })
 });
+
+function scrollBottom(){
+  var target = $('.message').last();
+  var position = target.offset().top + $('.messages').scrollTop();
+  $('.messages').animate({
+    scrollTop: position
+  }, 300, 'swing');
+}
