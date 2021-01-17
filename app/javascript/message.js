@@ -13,14 +13,14 @@ $(document).on('turbolinks:load', function(){
                   </div>
                   <p class="lower-message">
                     <div class="message-content">
-                      ${content}
+                    ${content}
                     </div>
-                      ${img}
+                    ${img}
                   </p>
                 </div>`
   return html;
   }
-  $('form').on('submit', function(e){
+  $('#new_message').on('submit', function(e){
     e.preventDefault();
     var message = new FormData(this);
     var url = (window.location.href);
@@ -35,10 +35,13 @@ $(document).on('turbolinks:load', function(){
     .done(function(data){
       var html = buildHTML(data);
       $('.messages').append(html);
-      $('#message_content').val(''); //input内のメッセージを消しています。
+      $('#message_content').val('');
     })
     .fail(function(data){
       alert('エラーが発生したためメッセージは送信できませんでした。');
+    })
+    .always(function(data){
+      $('.form-submit').prop('disabled', false);
     })
   })
 });
