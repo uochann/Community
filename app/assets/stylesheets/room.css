@@ -24,7 +24,9 @@ li {
 }
 
 button:hover {
-  background-color: #ff7fff;
+  background-color: #07e2ff;
+  max-width:300px;
+  width:100%;
   color: #fff;
   cursor: pointer;
 }

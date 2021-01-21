@@ -3,7 +3,7 @@
 }
 .side-bar {
   background-color: #ffffff;
-  width: calc(100% - 700px);
+  width: 300px;
   height: 100vh;
   border-radius: 8px;
 }
@@ -221,6 +221,7 @@
   }
   .chat {
     background-color: #ffffff;
+    width: calc(100% - 300px);
   }
   .chat-header {
     background-color: #f7d5eb;
@@ -285,11 +286,13 @@
   .form-input {
     background-color: white;
     display: flex;
+    width: 100%;
     border-radius: 8px;
   }
   .form-message {
     border: none;
     height: 50px;
+    width: 100%;
     padding-left: 10px;
     border-radius: 8px;
   }
@@ -308,6 +311,7 @@
     background-color: lightblue;
     color: white;
     padding: 12px;
+    width: 60px;
     margin: 5px 10px;
     text-align: center;
   }
