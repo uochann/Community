@@ -112,13 +112,15 @@
   padding: 0;
   font-size: 13px;
 }
+a {
+  color: #079fe6;
+}
 
-
-@media (max-width: 599px) {
+@media (max-width: 400px) {
   .account-page .account-page__inner {
-    width: 517px;
+    width: 310px;
     margin: 60px auto;
-    padding: 60px;
+    padding: 30px;
     background-color: #fff;
     border: 1px solid pink;
     border-radius: 8px;
@@ -126,6 +128,9 @@
   .account-page .account-page__inner .account-page__inner--left, .account-page .account-page__inner .account-page__inner--right {
     float: left;
     width: 50%;
+  }
+  .account-page__inner--right {
+    margin-top: 90px;
   }
   .account-page .account-page__inner:after {
     clear: both;
@@ -135,10 +140,10 @@
   .account-page .account-page__header h2 {
     margin-bottom: 10px;
     letter-spacing: 3px;
-    font-size: 40px;
+    font-size: 19px;
     font-weight: 200;
   }
-  .account-page .account-page__header h2:after {
+  .account-page .account-page__header h2:after  {
     content: "";
     display: block;
     width: 60px;
@@ -151,13 +156,15 @@
     font-weight: 200;
   }
   .account-page .account-page__header .btn {
-    margin-top: 20px;
     color: #fff;
-    background-color: #ccc;
-    font-size: 14px;
+    background-color: rgb(214, 214, 214);
+    font-size: 9px;
+    padding: 10px;
+    text-align: center;
   }
   .account-page .field {
     margin-bottom: 10px;
+    text-decoration: none;
   }
   .account-page .field .field-label {
     padding: 10px 0;
@@ -206,5 +213,8 @@
     bottom: 0;
     width: 5px;
     background-color: #d65f4c;
+  }
+  a {
+    color: #079fe6;
   }
 }

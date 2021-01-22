@@ -53,7 +53,7 @@ button:hover {
 }
 .chat-room-form__input {
   float: left;
-  width: 100%;
+  width: 79%;
   line-height: 30px;
   padding: 10px 15px;
   box-sizing: border-box;
@@ -135,11 +135,37 @@ select {
   display: contents;
 }
 
-@media (max-width: 599px) {
+@media (max-width: 400px) {
+  h1 {
+    letter-spacing: 2px;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+  }
+  h2 {
+    margin-bottom: 10px;
+    color: #f05050;
+    font-size: 14px;
+  }
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  li {
+    margin: 0;
+    padding: 0;
+    font-size: 13px;
+  }
+  button:hover {
+    background-color: #ff7fff;
+    color: #fff;
+    cursor: pointer;
+  }
   .chat-room-form {
-    width: 517px;
+    width: 310px;
     margin: 60px auto;
-    padding: 40px;
+    padding: 40px 7px 40px;
     background-color: #fff;
     border: 1px solid #ddd;
     box-sizing: border-box;
@@ -161,7 +187,7 @@ select {
   .chat-room-form__input {
     float: left;
     width: 100%;
-    line-height: 30px;
+    line-height: 20px;
     padding: 10px 15px;
     box-sizing: border-box;
     border-radius: 8px;
@@ -184,10 +210,10 @@ select {
   }
   .chat-room-form__field--left {
     float: left;
-    width: 30%;
-    padding-right: 9px;
-    padding-left: 20px;
+    width: 20%;
+    padding: 1px;
     box-sizing: border-box;
+    font-size: 12px;
   }
   .chat-room-form__field--right {
     float: right;
@@ -224,8 +250,11 @@ select {
     color: #38aef0;
   }
   select {
-    width: 300px;
-    height: 50px;
+    float: left;
+    width: 100%;
+    line-height: 20px;
+    padding: 10px 15px;
+    box-sizing: border-box;
     border-radius: 8px;
   }
   .top-header {

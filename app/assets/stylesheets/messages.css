@@ -171,13 +171,13 @@
   display: none;
 }
 
-@media (max-width: 599px) {
+@media (max-width: 400px) {
   .wrapper {
     display: flex;
   }
   .side-bar {
     background-color: #ffffff;
-    width: 185px;
+    width: 120px;
     height: 100vh;
     border-radius: 8px;
   }
@@ -194,9 +194,11 @@
     font-size: 11px;
     color: black;
     text-decoration: none;
+    display: none;
   }
   .create-room {
     font-size: 11px;
+    width: 90%;
   }
   .create-room a {
     border: 1px solid lightblue;
@@ -223,7 +225,7 @@
   }
   .chat {
     background-color: #ffffff;
-    width: calc(100% - 185px);
+    width: calc(100% - 120px);
   }
   .chat-header {
     background-color: #f7d5eb;
@@ -285,7 +287,7 @@
   .form {
     background-color: #DDDDDD;
     height: 60px;
-    padding: 20px 40px;
+    padding: 18px 40px;
     display: flex;
     border-radius: 8px;
   }
@@ -299,7 +301,7 @@
   .form-message {
     border: none;
     height: 30px;
-    width: 100%;
+    width: 90%;
     padding-left: 10px;
     border-radius: 8px;
   }
