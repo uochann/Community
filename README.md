@@ -21,7 +21,7 @@
 ##### Mysql
 
 ### インフラ
-##### AWS(EC2, S3)
+##### AWS(EC2, S3, route53)
 
 ### ミドルウェア
 ##### Docker, CircleCi(自動テスト、自動デプロイ)
