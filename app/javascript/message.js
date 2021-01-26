@@ -54,7 +54,7 @@ $(document).on('turbolinks:load', function(){
         data: {id: last_message_id},
         dataType: 'json',
       })
-      .done(function(messages){        // フォームに入力されたデータを引数として取得しています。
+      .done(function(messages){
         var insertHTML='';
           messages.forEach(function(message){
             insertHTML = buildHTML(message);
