@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   resources :rooms do
     resources :messages, only: [:index, :create]
   end
+
   namespace :api do
     resources :messages, only: :index, defaults: { format: 'json' }
   end
