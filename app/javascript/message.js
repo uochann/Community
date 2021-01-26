@@ -45,7 +45,7 @@ $(document).on('turbolinks:load', function(){
       })
     })
     var reloadMessages = function(){
-      if (document.location.href.match(/\/groups\/\d+\/messages/)){
+      if (document.location.href.match(/\/rooms\/\d+\/messages/)){
       var href = 'api/messages#index {:format=>"json"}'
       var last_message_id = $('.message:last').data('message-id');
       $.ajax({
@@ -53,8 +53,6 @@ $(document).on('turbolinks:load', function(){
         type: 'GET',
         data: {id: last_message_id},
         dataType: 'json',
-        processData: false,
-        contentType: false
       })
       .done(function(messages){        // フォームに入力されたデータを引数として取得しています。
         var insertHTML='';
@@ -69,7 +67,7 @@ $(document).on('turbolinks:load', function(){
       });
     };
   };
-  setInterval(reloadMessages, 5000);
+  setInterval(reloadMessages, 2000);
 });
 
   function scrollBottom(){
