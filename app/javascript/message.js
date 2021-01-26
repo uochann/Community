@@ -44,7 +44,28 @@ $(document).on('turbolinks:load', function(){
         $('.form-submit').prop('disabled', false);
       })
     })
-  });
+    var reloadMessages = function(){
+      if (window.location.href.match(/\/rooms\/\d+\/messages/)){
+      var url = (window.location.href);
+      var last_message_id = $('.message:last').data('message-id');   // カスタムデータ属性を利用して、最新のメッセージIDを取得しています。
+      $.ajax({
+        url:  url,
+        type: 'GET',
+        data: {id: last_message_id},
+        dataType: 'json'
+      })
+      .done(function(data){
+        var html = buildHTML(data);
+        $('.messages').append(html);
+        $('#message_content').val('');
+        console.log('最新のメッセージを取得しました')
+        scrollBottom();
+      })
+      .fail(function(){
+        alert("自動更新に失敗しました")
+      });
+    };
+  };});
 
   function scrollBottom(){
     var target = $('.message').last();

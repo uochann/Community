@@ -5,6 +5,10 @@ class MessagesController < ApplicationController
     @message = Message.new
     @room = Room.find(params[:room_id])
     @messages = @room.messages.includes(:user)
+    respond_to do |format|
+      format.html
+      format.json
+    end
   end
 
   def create
