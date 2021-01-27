@@ -45,7 +45,6 @@ $(document).on('turbolinks:load', function(){
       })
     })
     var reloadMessages = function(){
-      if (document.location.href.match(/\/rooms\/\d+\/messages/)){
       var href = 'api/messages#index {:format=>"json"}'
       var last_message_id = $('.message:last').data('message-id');
       $.ajax({
@@ -54,20 +53,22 @@ $(document).on('turbolinks:load', function(){
         data: {id: last_message_id},
         dataType: 'json',
       })
-      .done(function(messages){
-        var insertHTML='';
-          messages.forEach(function(message){
-            insertHTML = buildHTML(message);
-            $('.messages').append(insertHTML);
-            $('.messages').animate({scrollTop: $('.messages')[0].scrollHeight}, 'fast');
+      .done(function(messages) {
+        if (messages.length !== 0) {
+          var insertHTML = '';
+          $.each(messages, function(i, message) {
+            insertHTML += buildHTML(message)
           });
+          $('.messages').append(insertHTML);
+          $('.messages').animate({ scrollTop: $('.messages')[0].scrollHeight});
+        }
       })
       .fail(function(){
         alert("自動更新に失敗しました")
       });
     };
-  };
-  setInterval(reloadMessages, 2000);
+  if (document.location.href.match(/\/rooms\/\d+\/messages/)){
+    setInterval(reloadMessages, 7000)};
 });
 
   function scrollBottom(){
