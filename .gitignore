@@ -12,6 +12,10 @@
 /tmp/*
 !/log/.keep
 !/tmp/.keep
+Ignore all logfiles and tempfiles.
+/image
+/tmp
+
 
 # Ignore uploaded files in development.
 /storage/*
