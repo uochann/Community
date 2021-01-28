@@ -51,8 +51,6 @@ $(document).on('turbolinks:load', function(){
         type: 'GET',
         data: {id: last_message_id},
         dataType: 'json',
-        processData: false,
-        contentType: false
       })
       .done(function(messages) {
         if (messages.length !== 0) {
