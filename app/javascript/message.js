@@ -45,12 +45,14 @@ $(document).on('turbolinks:load', function(){
     })
     var reloadMessages = function(){
       var href = 'api/messages#index {:format=>"json"}'
-      var last_message_id = $('.message:last').data('message-id');
+      var message = new FormData(this);
       $.ajax({
         url: href,
         type: 'GET',
-        data: {id: last_message_id},
+        data: message,
         dataType: 'json',
+        processData: false,
+        contentType: false
       })
       .done(function(messages) {
         if (messages.length !== 0) {
