@@ -1,6 +1,7 @@
 $(document).on('turbolinks:load', function(){
     function buildHTML(message) {
       var content = message.content ? `${ message.content }` : "";
+      var img = message.image ? `< img class='message-image' src="${ message.image}">` : "";
       var html = `<div class= "message" data-message-id=${message.id}>
                     <div class="upper-message">
                       <p class="message-user">
@@ -14,6 +15,7 @@ $(document).on('turbolinks:load', function(){
                       <div class="message-content">
                       ${content}
                       </div>
+                        ${img}
                     </p>
                   </div>`
     return html;
@@ -45,11 +47,11 @@ $(document).on('turbolinks:load', function(){
     })
     var reloadMessages = function(){
       var href = 'api/messages#index {:format=>"json"}'
-      var message = new FormData(this);
+      var last_message_id = $('.message:last').data('message-id');
       $.ajax({
         url: href,
         type: 'GET',
-        data: message,
+        data: {id: last_message_id},
         dataType: 'json',
         processData: false,
         contentType: false
