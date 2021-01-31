@@ -88,4 +88,5 @@ gem 'rails-i18n'
 gem 'devise-i18n'
 gem 'devise-i18n-views'
 
-# gem 'asset_sync'
+gem 'asset_sync'
+gem 'fog-aws'
