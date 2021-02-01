@@ -68,7 +68,7 @@ $(document).on('turbolinks:load', function(){
       });
     };
   if (document.location.href.match(/\/rooms\/\d+\/messages/)){
-    setInterval(reloadMessages, 3000)};
+    setInterval(reloadMessages, 5000)};
 })});
 
   function scrollBottom(){
