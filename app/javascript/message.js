@@ -1,6 +1,7 @@
 $(document).on('turbolinks:load', function(){
     function buildHTML(message) {
-      var content = message.content ? `${ message.content }` : "";
+      var img = message.image ? `<img class="message-image" src=${message.image}>` : '' ;
+      var content = message.content ? `${ message.content }` : '';
       var html = `<div class= "message" data-message-id=${message.id}>
                     <div class="upper-message">
                       <p class="message-user">
@@ -14,6 +15,7 @@ $(document).on('turbolinks:load', function(){
                       <div class="message-content">
                       ${content}
                       </div>
+                      ${img}
                     </p>
                   </div>`
     return html;
@@ -43,7 +45,6 @@ $(document).on('turbolinks:load', function(){
         $('.form-submit').prop('disabled', false);
       })
     })
-    $(document).on('turbolinks:load', function(){
     var reloadMessages = function(){
       var href = 'api/messages#index {:format=>"json"}'
       var last_message_id = $('.message:last').data('message-id');
@@ -68,8 +69,8 @@ $(document).on('turbolinks:load', function(){
       });
     };
   if (document.location.href.match(/\/rooms\/\d+\/messages/)){
-    setInterval(reloadMessages, 5000)};
-})});
+    setInterval(reloadMessages, 7000)};
+});
 
   function scrollBottom(){
     var target = $('.message').last();
