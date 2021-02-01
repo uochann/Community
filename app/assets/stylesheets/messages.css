@@ -107,8 +107,8 @@
   font-size: 16px;
 }
 .message-image {
-  width: 256px;
-  height: 256px;
+  width: 245px;
+  height: 245px;
 }
 
 .message-date {
@@ -279,6 +279,10 @@
     color: deepskyblue;
     font-size: 10px;
     padding-left: 10px;
+  }
+  .message-image {
+    width: 125px;
+    height: 125px;
   }
   .lower-message {
     margin-top: 10px;

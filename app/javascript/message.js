@@ -1,7 +1,26 @@
 $(document).on('turbolinks:load', function(){
     function buildHTML(message) {
+      var img = message.image ? `<img class="message-image" src=${message.image}>` : '' ;
       var content = message.content ? `${ message.content }` : '';
-      var html = `<div class= "message" data-message-id=${message.id}>
+      if (img === 0) {
+        var html = `<div class= "message" data-message-id=${message.id}>
+        <div class="upper-message">
+          <p class="message-user">
+            ${message.user_name}
+          </p>
+          <p class="message-date">
+            ${message.date}
+          </p>
+        </div>
+        <p class="lower-message">
+          <div class="message-content">
+          ${content}
+          </div>
+          ${img}
+        </p>
+      </div>`
+      }else {
+          var html = `<div class= "message" data-message-id=${message.id}>
                     <div class="upper-message">
                       <p class="message-user">
                         ${message.user_name}
@@ -16,12 +35,14 @@ $(document).on('turbolinks:load', function(){
                       </div>
                     </p>
                   </div>`
+                }
     return html;
     }
     $('#new_message').on('submit', function(e){
       e.preventDefault();
       var message = new FormData(this);
       var url = (window.location.href);
+      console.log(message);
       $.ajax({
         url: url,
         type: 'POST',
@@ -42,6 +63,7 @@ $(document).on('turbolinks:load', function(){
       .always(function(data){
         $('.form-submit').prop('disabled', false);
       })
+      return false;
     })
     var reloadMessages = function(){
       var href = 'api/messages#index {:format=>"json"}'
