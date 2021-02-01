@@ -43,6 +43,7 @@ $(document).on('turbolinks:load', function(){
         $('.form-submit').prop('disabled', false);
       })
     })
+    $(document).on('turbolinks:load', function(){
     var reloadMessages = function(){
       var href = 'api/messages#index {:format=>"json"}'
       var last_message_id = $('.message:last').data('message-id');
@@ -67,8 +68,8 @@ $(document).on('turbolinks:load', function(){
       });
     };
   if (document.location.href.match(/\/rooms\/\d+\/messages/)){
-    setInterval(reloadMessages, 7000)};
-});
+    setInterval(reloadMessages, 3000)};
+})});
 
   function scrollBottom(){
     var target = $('.message').last();
