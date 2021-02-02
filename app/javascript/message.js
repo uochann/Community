@@ -7,7 +7,7 @@ $(document).on('turbolinks:load', function(){
         var html = `<div class= "message" data-message-id=${message.id}>
         <div class="upper-message">
           <p class="message-user">
-            ${message.user_name}r
+            ${message.user_name}
           </p>
           <p class="message-date">
             ${message.date}
@@ -24,7 +24,7 @@ $(document).on('turbolinks:load', function(){
       var html = `<div class= "message" data-message-id=${message.id}>
                     <div class="upper-message">
                       <p class="message-user">
-                        ${message.user_name}r
+                        ${message.user_name}
                       </p>
                       <p class="message-date">
                         ${message.date}
@@ -54,6 +54,7 @@ $(document).on('turbolinks:load', function(){
         var html = buildHTML(data);
         $('.messages').append(html);
         $('#message_content').val('');
+        $('#message_image').val('');
         scrollBottom();
       })
       .fail(function(data){
