@@ -1,0 +1,2 @@
+module TesthogeHelper
+end

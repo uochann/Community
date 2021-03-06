@@ -1,0 +1,2 @@
+class TesthogeController < ApplicationController
+end
